@@ -315,8 +315,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14072e323786a34a18e1bf1ef8940fff0537cc45f1f35ad96d4921008c18a88a"
 dependencies = [
  "digest 0.9.0",
- "ff",
- "group",
+ "ff 0.10.1",
+ "group 0.10.0",
  "heapless",
  "pairing",
  "rand_core 0.6.3",
@@ -925,6 +925,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "ff"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d013fc25338cc558c5c2cfbad646908fb23591e2404481826742b651c9af7160"
+dependencies = [
+ "rand_core 0.6.3",
+ "subtle",
+]
+
+[[package]]
 name = "file_transfer"
 version = "0.1.0"
 dependencies = [
@@ -1147,7 +1157,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1c363a5301b8f153d80747126a04b3c82073b9fe3130571a9d170cacdeaf7912"
 dependencies = [
  "byteorder",
- "ff",
+ "ff 0.10.1",
+ "rand_core 0.6.3",
+ "subtle",
+]
+
+[[package]]
+name = "group"
+version = "0.12.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5dfbfb3a6cfbd390d5c9564ab283a0349b9b9fcd46a706c1eb10e0db70bfbac7"
+dependencies = [
+ "ff 0.12.1",
  "rand_core 0.6.3",
  "subtle",
 ]
@@ -1682,7 +1703,7 @@ version = "0.45.0"
 dependencies = [
  "bls12_381_plus",
  "cfg-if",
- "group",
+ "group 0.10.0",
  "heapless",
  "hex",
  "ockam_channel",
@@ -1902,7 +1923,7 @@ version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7de9d09263c9966e8196fe0380c9dbbc7ea114b5cf371ba29004bc1f9c6db7f3"
 dependencies = [
- "group",
+ "group 0.10.0",
 ]
 
 [[package]]
@@ -2413,8 +2434,8 @@ dependencies = [
  "blake2",
  "bls12_381_plus",
  "digest 0.9.0",
- "ff",
- "group",
+ "ff 0.10.1",
+ "group 0.10.0",
  "hmac-drbg",
  "managed",
  "pairing",
@@ -2434,8 +2455,8 @@ name = "signature_bls"
 version = "0.34.0"
 dependencies = [
  "bls12_381_plus",
- "ff",
- "group",
+ "ff 0.12.1",
+ "group 0.12.1",
  "hkdf",
  "pairing",
  "rand_core 0.6.3",
@@ -2454,8 +2475,8 @@ dependencies = [
  "blake2",
  "bls12_381_plus",
  "digest 0.9.0",
- "ff",
- "group",
+ "ff 0.10.1",
+ "group 0.10.0",
  "hashbrown 0.11.2",
  "heapless",
  "rand 0.8.5",
@@ -2474,8 +2495,8 @@ dependencies = [
  "blake2",
  "bls12_381_plus",
  "digest 0.9.0",
- "ff",
- "group",
+ "ff 0.10.1",
+ "group 0.10.0",
  "hkdf",
  "hmac-drbg",
  "pairing",
@@ -3052,8 +3073,8 @@ version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f509df857e50af93bea4921d55f66a719d2b5f1f6d066abe7f21800448d09ca"
 dependencies = [
- "ff",
- "group",
+ "ff 0.10.1",
+ "group 0.10.0",
  "rand_chacha 0.3.1",
  "rand_core 0.6.3",
  "serde",
