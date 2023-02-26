@@ -27,7 +27,7 @@ alloc = []
 [dependencies]
 bls12_381_plus = { version = "0.5", default-features = false, features = [
     "alloc",
-    "pairings",
+    "hashing",
 ] }
 ff = { version = "0.12.1", default-features = false }
 group = "0.12.1"
