@@ -318,6 +318,7 @@ dependencies = [
  "ff 0.10.1",
  "group 0.10.0",
  "heapless",
+ "pairing",
  "rand_core 0.6.3",
  "serde",
  "subtle",
