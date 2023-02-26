@@ -314,7 +314,6 @@ version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14072e323786a34a18e1bf1ef8940fff0537cc45f1f35ad96d4921008c18a88a"
 dependencies = [
- "digest 0.9.0",
  "ff 0.10.1",
  "group 0.10.0",
  "heapless",
