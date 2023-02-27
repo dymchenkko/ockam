@@ -13,6 +13,7 @@
 //! but provides some optimizations when an allocator exists for verifying
 //! aggregated signatures.
 #![deny(unsafe_code)]
+#![feature(restricted_std)]
 #![warn(
     missing_docs,
     trivial_casts,
