@@ -314,11 +314,25 @@ version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14072e323786a34a18e1bf1ef8940fff0537cc45f1f35ad96d4921008c18a88a"
 dependencies = [
- "digest 0.9.0",
  "ff 0.10.1",
  "group 0.10.0",
  "heapless",
- "pairing",
+ "rand_core 0.6.3",
+ "serde",
+ "subtle",
+ "zeroize",
+]
+
+[[package]]
+name = "bls12_381_plus"
+version = "0.5.3"
+source = "git+https://github.com/dymchenkko/bls12_381_plus#3b277b7cd718c130f7f58d71efa7fb3462940c46"
+dependencies = [
+ "digest 0.9.0",
+ "ff 0.12.1",
+ "group 0.12.1",
+ "heapless",
+ "pairing 0.22.0",
  "rand_core 0.6.3",
  "serde",
  "subtle",
@@ -1576,7 +1590,7 @@ name = "ockam"
 version = "0.57.0"
 dependencies = [
  "arrayref",
- "bls12_381_plus",
+ "bls12_381_plus 0.5.2",
  "dyn-clone",
  "hex",
  "ockam_channel",
@@ -1701,7 +1715,7 @@ dependencies = [
 name = "ockam_identity"
 version = "0.45.0"
 dependencies = [
- "bls12_381_plus",
+ "bls12_381_plus 0.5.2",
  "cfg-if",
  "group 0.10.0",
  "heapless",
@@ -1924,6 +1938,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7de9d09263c9966e8196fe0380c9dbbc7ea114b5cf371ba29004bc1f9c6db7f3"
 dependencies = [
  "group 0.10.0",
+]
+
+[[package]]
+name = "pairing"
+version = "0.22.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "135590d8bdba2b31346f9cd1fb2a912329f5135e832a4f422942eb6ead8b6b3b"
+dependencies = [
+ "group 0.12.1",
 ]
 
 [[package]]
@@ -2432,13 +2455,13 @@ name = "signature_bbs_plus"
 version = "0.36.0"
 dependencies = [
  "blake2",
- "bls12_381_plus",
+ "bls12_381_plus 0.5.3",
  "digest 0.9.0",
  "ff 0.10.1",
  "group 0.10.0",
  "hmac-drbg",
  "managed",
- "pairing",
+ "pairing 0.20.0",
  "rand 0.8.5",
  "rand_core 0.6.3",
  "rand_xorshift",
@@ -2454,11 +2477,11 @@ dependencies = [
 name = "signature_bls"
 version = "0.34.0"
 dependencies = [
- "bls12_381_plus",
+ "bls12_381_plus 0.5.3",
  "ff 0.12.1",
  "group 0.12.1",
  "hkdf",
- "pairing",
+ "pairing 0.20.0",
  "rand_core 0.6.3",
  "rand_xorshift",
  "serde",
@@ -2473,7 +2496,7 @@ name = "signature_core"
 version = "0.36.0"
 dependencies = [
  "blake2",
- "bls12_381_plus",
+ "bls12_381_plus 0.5.2",
  "digest 0.9.0",
  "ff 0.10.1",
  "group 0.10.0",
@@ -2493,13 +2516,13 @@ name = "signature_ps"
 version = "0.34.0"
 dependencies = [
  "blake2",
- "bls12_381_plus",
+ "bls12_381_plus 0.5.2",
  "digest 0.9.0",
  "ff 0.10.1",
  "group 0.10.0",
  "hkdf",
  "hmac-drbg",
- "pairing",
+ "pairing 0.20.0",
  "rand 0.8.5",
  "rand_chacha 0.3.1",
  "rand_core 0.6.3",
