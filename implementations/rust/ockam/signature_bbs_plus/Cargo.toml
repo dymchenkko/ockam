@@ -21,7 +21,7 @@ publish = true
 rust-version = "1.56.0"
 
 [dependencies]
-bls12_381_plus = { version = "0.5", default-features = false }
+bls12_381_plus = { git = "https://github.com/dymchenkko/bls12_381_plus", default-features = false }
 blake2 = { version = "0.9", default-features = false }
 digest = { version = "0.9", default-features = false }
 ff = { version = "0.10", default-features = false }
